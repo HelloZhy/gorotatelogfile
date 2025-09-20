@@ -50,6 +50,6 @@ func TestRotateLogFile(t *testing.T) {
 
 	lenOfDirEntries := len(dirEntries)
 	if lenOfDirEntries != int(userDefinedMaxNumOfLogFiles) {
-		t.Fatalf("num of dirEntries: %d, expected: %d", lenOfDirEntries, defaultMaxNumOfLogFiles)
+		t.Fatalf("num of dirEntries: %d, expected: %d", lenOfDirEntries, userDefinedMaxNumOfLogFiles)
 	}
 }

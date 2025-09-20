@@ -28,7 +28,7 @@ type rotateLogFileBackend struct {
 }
 
 func (b *rotateLogFileBackend) generateLogFilePath() string {
-	return filepath.Join(b.inOut.LogDir, fmt.Sprintf("%s-%d.log", b.inOut.Prefix, time.Now().UnixMilli()))
+	return filepath.Join(b.inOut.LogDir, fmt.Sprintf("%s-%d.log", b.inOut.Prefix, time.Now().UnixMicro()))
 }
 
 func (b *rotateLogFileBackend) closeCurrentLogFile() {
